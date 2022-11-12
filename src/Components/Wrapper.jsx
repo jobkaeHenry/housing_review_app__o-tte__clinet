@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Outlet } from "react-router-dom";
 
 
 const MainLeftWrapper = styled.aside`
@@ -12,6 +13,11 @@ const MainLeftWrapper = styled.aside`
 export const MainCenterWrapper = styled.section`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-width: 360px;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: var(--pure-white);
 `;
 export const MainRightWrapper = styled.aside`
   min-width: 298px;
@@ -23,10 +29,21 @@ export const MainRightWrapper = styled.aside`
 export const MainContentContainer  = styled.div`
   display: flex;
   flex-direction: row;
+
 `
 export const ColumnWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
+
+export const MobileWrapper = () => {
+  return (
+    <MainCenterWrapper>
+      <Outlet/>
+    </MainCenterWrapper>
+  )
+}
+
+
 
 export default MainLeftWrapper;

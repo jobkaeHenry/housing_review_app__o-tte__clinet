@@ -18,4 +18,33 @@ export const handlers = [
       })
     );
   }),
+  rest.get("/room", async (req, res, ctx) => {
+    return res(
+      ctx.json([
+        {
+            roomId: 1,
+            title:"소라빌라",
+            image:"https://picsum.photos/640/360",
+            roomType:"1",
+            heatingType:"중앙난방"
+          },
+          {
+            roomId: 2,
+            title:"장미원룸",
+            image:"https://www.stevensegallery.com/640/360​​",
+            roomType:"1",
+            heatingType:"중앙난방"
+          },
+          {
+            roomId: 3,
+            title:"노송지대",
+            image:"https://placebear.com/640/360",
+            roomType:"1",
+            heatingType:"중앙난방"
+          },
+      ])
+    );
+  }),
+
+
 ];

@@ -22,6 +22,7 @@ const NavContainer = styled.nav`
   padding: 0 24px;
   position: fixed;
   bottom: 0;
+  background-color: var(--pure-white);
 `;
 const NavElemWrapper = styled.ul`
   width: 100%;

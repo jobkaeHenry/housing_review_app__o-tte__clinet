@@ -50,11 +50,26 @@ export const handlers = [
   }),
   rest.get("/room/detail/1/review", async (req, res, ctx) => {
     return res(
-      ctx.json({
+      ctx.json([
+        {
+        reviewId:1,
         reviewStar: 4,
-        text: "냄새가 조금 납니다",
+        text: "밤에 소음이 좀 들어오는거 같은데 저렴한 방이니 이해하렵니다",
         date: "2022-11-12",
-      })
+      },
+      {
+        reviewId:2,
+        reviewStar: 3,
+        text: "냄새가 조금 납니다",
+        date: "2022-11-11",
+      },
+      {
+        reviewId:2,
+        reviewStar: 3,
+        text: "집주인이 연락이 잘 안됩니다",
+        date: "2022-11-10",
+      },
+    ])
     );
   }),
   rest.post("/room/detail/1/review", async (req, res, ctx) => {

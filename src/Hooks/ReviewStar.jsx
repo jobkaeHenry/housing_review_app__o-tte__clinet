@@ -6,7 +6,7 @@ const Yellow = styled.span`
   color: #eab64d;
 `;
 const Gray = styled.span`
-  color: var(--font-gray);
+  color: var(--line-gray);
 `;
 
 
@@ -20,13 +20,13 @@ export const ReviewStar = ({starNum}) => {
     }
     console.log(filledStar);
     for (let j = 0; j < 5 - starNum; j++) {
-      noStar += "☆";
+      noStar += "★";
     }
     return (
-      <>
+      <div>
         <Yellow>{filledStar}</Yellow>
         <Gray>{noStar}</Gray>
-      </>
+      </div>
     );
   };
   

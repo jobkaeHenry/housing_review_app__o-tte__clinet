@@ -3,6 +3,52 @@ import { FaStar } from "react-icons/fa";
 import styled from "@emotion/styled";
 import { useRef } from "react";
 import axios from "axios";
+import { SigButton } from "../Components/GlobalComponents";
+
+const WriteReviewContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  .reviewStar {
+    text-align:center;
+  }
+  
+
+  .reviewStar li {
+    border: 1px solid gray;
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom:5px;
+    
+  }
+  .reviewStar li label {
+    display: none;
+  }
+
+  .reviewText {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviewText label {
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color:
+    color:
+
+  }
+  .reviewText input {
+    width: 500px;
+  }
+  .submitBtn {
+    margin-top: 20px;
+  }
+`;
 
 const Stars = styled.div`
   & svg {
@@ -123,7 +169,7 @@ const WriteReview = () => {
   };
 
   return (
-    <div className="writeReviewContainer">
+    <WriteReviewContainer>
       <div className="reviewStar">
         <ul>
           <li className="cleanliness">
@@ -225,13 +271,13 @@ const WriteReview = () => {
         </ul>
       </div>
       <div className="reviewText">
-        <label> 리뷰를 남겨주세요</label>
+        <label> 사용했던 방에 대해서 리뷰를 남겨주세요</label>
         <input type="text" onChange={onChangeText} value={reviewText || ""} />
       </div>
-      <div className="submitBtn">
-        <button onClick={sendReview}>제출하기</button>
-      </div>
-    </div>
+      <SigButton className="submitBtn" onClick={sendReview}>
+        제출하기
+      </SigButton>
+    </WriteReviewContainer>
   );
 };
 

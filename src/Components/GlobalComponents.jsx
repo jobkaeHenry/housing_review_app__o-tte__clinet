@@ -62,9 +62,12 @@ const ImageElem = styled.img`
   margin-right: 16px;
 `;
 
+
 export const ImageWrapper = ({ size = "36", src, alt }) => {
   return <ImageElem src={src} size={size} alt={alt} />;
 };
+// 아이콘 랩퍼
+
 
 // 좋아요 카운트
 
@@ -73,9 +76,9 @@ const ViewCounterWrapper = styled.div`
   height: 100%;
   justify-content: space-between;
 `;
-const IconElem = styled.img`
-  width: 16px;
-  height: 16px;
+export const IconElem = styled.img`
+  width: ${(props) => (props.size ? props.size : "16")}px;
+  height: ${(props) => (props.size ? props.size : "16")}px;
 `;
 const ViewCounterColumn = styled.div`
   display: flex;

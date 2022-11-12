@@ -1,7 +1,10 @@
 
 const Signup = () => {
   return (
-    <div>SignUp</div>
+    <>
+    <input className=""></input>
+    <input></input>
+    </>
   )
 }
 

@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 // 이미지의 경우, 상단에 변수로 Import해서 사용할 시 자동으로 경로를 관리해줍니다
 // 아래와같이 변수로 import시 이미지의 경로를 string 형태로 리턴해줍니다
-import { Outlet, NavLink } from "react-router-dom";
+import { Link, Outlet, useParams, NavLink } from "react-router-dom";
 import { SubText } from "./GlobalComponents";
 import { ReactComponent as Home } from "../images/homeIcon.svg";
 import { ReactComponent as Community } from "../images/communityIcon.svg";
 import { ReactComponent as Chat } from "../images/chatIcon.svg";
-import { ReactComponent as Search } from "../images/searchIcon.svg";
+import { ReactComponent as Market } from "../images/marketIcon.svg";
 import { ReactComponent as Login } from "../images/loginIcon.svg";
 import ProfileIcon from "../images/emptyProfileIcon.svg";
 import { useRecoilValue } from "recoil";
@@ -22,7 +22,6 @@ const NavContainer = styled.nav`
   padding: 0 24px;
   position: fixed;
   bottom: 0;
-  background-color: var(--pure-white);
 `;
 const NavElemWrapper = styled.ul`
   width: 100%;
@@ -91,20 +90,33 @@ const Navbar = () => {
             }
           >
             <NavElem title="검색">
-              <Search />
+              <Market />
             </NavElem>
           </NavLink>
-
           <NavLink
-            to="/favorites"
+            to="/board"
             className={({ isActive }) =>
               isActive ? "activeIcon" : "disableIcon"
             }
           >
-            <NavElem title="찜">
-              <Chat />
+            <NavElem title="모아보기">
+              <Community />
             </NavElem>
           </NavLink>
+          {user ? (
+            <>
+              <NavLink
+                to="/talk"
+                className={({ isActive }) =>
+                  isActive ? "activeIcon" : "disableIcon"
+                }
+              >
+                <NavElem title="찜">
+                  <Chat />
+                </NavElem>
+              </NavLink>
+            </>
+          ) : null}
 
           <NavLink
             to={user ? `/profile/${user.userId}` : "/login"}

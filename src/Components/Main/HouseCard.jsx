@@ -11,17 +11,16 @@ const CardWrapper = styled.article`
   flex-direction: column;
   justify-content: space-between;
 `;
-const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div`
   width: 100%;
   max-height: 320px;
   overflow: hidden;
   border-radius: 8px;
 `;
-const ImageElem = styled.img`
+export const ImageElem = styled.img`
   width: 100%;
 `;
-const ColumnWrapper = styled.div``;
-const RowWrapper = styled.div`
+export const RowWrapper = styled.div`
   display: flex;
 `;
 const Content = styled.span`

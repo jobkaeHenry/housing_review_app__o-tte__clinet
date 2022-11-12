@@ -57,4 +57,7 @@ export const handlers = [
       })
     );
   }),
+  rest.post("/room/detail/1/review", async (req, res, ctx) => {
+    return res(ctx.status(200));
+  }),
 ];

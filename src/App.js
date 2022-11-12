@@ -14,6 +14,7 @@ import Search from "./Pages/Search";
 import Header from "./Components/Header";
 import { MobileWrapper } from "./Components/Wrapper";
 import RoomDetail from "./Pages/room/RoomDetail";
+import WriteReview from "./Pages/WriteReview";
 function App() {
   return (
     <BrowserRouter>
@@ -36,6 +37,7 @@ function App() {
           <Route path="/favorites" element={<Favorite />} />
           <Route path="/search" element={<Search />} />
           <Route path="/room/:id" element={<RoomDetail />} />
+          <Route path="/room/:id/WriteReview" element={<WriteReview />} />
         </Route>
         {/* 잘못된 경로일때 보내는 곳*/}
         <Route path="*" element={<Missing />} />

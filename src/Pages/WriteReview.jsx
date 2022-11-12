@@ -13,16 +13,14 @@ const WriteReviewContainer = styled.div`
   margin-top: 20px;
 
   .reviewStar {
-    text-align:center;
+    text-align: center;
   }
-  
 
   .reviewStar li {
     border: 1px solid gray;
     padding: 5px;
     font-size: 20px;
-    margin-bottom:5px;
-    
+    margin-bottom: 5px;
   }
   .reviewStar li label {
     display: none;
@@ -38,9 +36,6 @@ const WriteReviewContainer = styled.div`
   .reviewText label {
     font-size: 20px;
     margin-bottom: 20px;
-    background-color:
-    color:
-
   }
   .reviewText input {
     width: 500px;

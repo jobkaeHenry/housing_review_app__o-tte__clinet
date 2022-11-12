@@ -7,9 +7,10 @@ import Main from "./Pages/Main";
 import Signup from "./Pages/Signup";
 import Missing from "./Pages/Missing";
 import Login from "./Pages/Login";
-import Talk from "./Pages/Talk";
+import Favorite from "./Pages/Favorite";
 import DevTools from "./Components/DevTools";
 import AuthProvider from "./Components/Auth/AuthProvider";
+import Search from "./Pages/Search";
 function App() {
   return (
     <BrowserRouter>
@@ -22,12 +23,13 @@ function App() {
         {/* 로그인해야만 접근가능한 URL */}
         <Route element={<AuthProvider />}>
           <Route path="/profile/:id" element={<Profile />} />
-          <Route path="/talk" element={<Talk />} />
         </Route>
         {/* 퍼블릭 오픈된 url */}
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/favorites" element={<Favorite />} />
+        <Route path="/search" element={<Search />} />
 
         {/* 잘못된 경로일때 보내는 곳*/}
         <Route path="*" element={<Missing />} />

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 // 이미지의 경우, 상단에 변수로 Import해서 사용할 시 자동으로 경로를 관리해줍니다
 // 아래와같이 변수로 import시 이미지의 경로를 string 형태로 리턴해줍니다
-import { Outlet,  NavLink } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import { SubText } from "./GlobalComponents";
 import { ReactComponent as Home } from "../images/homeIcon.svg";
 import { ReactComponent as Community } from "../images/communityIcon.svg";
@@ -93,30 +93,17 @@ const Navbar = () => {
               <Search />
             </NavElem>
           </NavLink>
+
           <NavLink
-            to="/board"
+            to="/favorites"
             className={({ isActive }) =>
               isActive ? "activeIcon" : "disableIcon"
             }
           >
-            <NavElem title="모아보기">
-              <Community />
+            <NavElem title="찜">
+              <Chat />
             </NavElem>
           </NavLink>
-          {user ? (
-            <>
-              <NavLink
-                to="/talk"
-                className={({ isActive }) =>
-                  isActive ? "activeIcon" : "disableIcon"
-                }
-              >
-                <NavElem title="찜">
-                  <Chat />
-                </NavElem>
-              </NavLink>
-            </>
-          ) : null}
 
           <NavLink
             to={user ? `/profile/${user.userId}` : "/login"}

@@ -25,6 +25,7 @@ export const handlers = [
             roomId: 1,
             title:"소라빌라",
             image:"https://picsum.photos/640/360",
+            price:"50/300",
             roomType:"1",
             heatingType:"중앙난방"
           },
@@ -32,13 +33,15 @@ export const handlers = [
             roomId: 2,
             title:"장미원룸",
             image:"https://www.stevensegallery.com/640/360​​",
-            roomType:"1",
+            price:"50/300",
+            roomType:"2",
             heatingType:"중앙난방"
           },
           {
             roomId: 3,
             title:"노송지대",
             image:"https://placebear.com/640/360",
+            price:"50/300",
             roomType:"1",
             heatingType:"중앙난방"
           },

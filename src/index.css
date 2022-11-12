@@ -79,6 +79,9 @@ input:focus, textarea:focus{
 .bold {
   font-weight: 700;
 }
+.white{
+  color: var(--pure-white);
+}
 
 /* 폰트 크기 설정 */
 .sub {
@@ -112,6 +115,7 @@ input:focus, textarea:focus{
 .mb-20 {
   margin-bottom: 20px;
 }
+
 
 .mr-4 {
   margin-right: 4px;

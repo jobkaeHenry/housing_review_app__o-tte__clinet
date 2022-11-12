@@ -21,7 +21,7 @@ const Main = () => {
       {!isLoading ? (
         <>
           {data.map((e) => {
-            return <HouseCard props={data} />;
+            return <HouseCard props={e} />;
           })}
         </>
       ) : null}

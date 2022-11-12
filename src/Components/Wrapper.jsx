@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { Outlet } from "react-router-dom";
 
-
 const MainLeftWrapper = styled.aside`
   min-width: 164px;
   min-height: 600px;
@@ -26,24 +25,26 @@ export const MainRightWrapper = styled.aside`
   min-height: 600px;
   background-color: #333;
 `;
-export const MainContentContainer  = styled.div`
+export const MainContentContainer = styled.div`
   display: flex;
   flex-direction: row;
-
-`
+`;
 export const ColumnWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
+const SafeMargin = styled.div`
+  width: 100%;
+  height: 150px;
+`;
 
 export const MobileWrapper = () => {
   return (
     <MainCenterWrapper>
-      <Outlet/>
+      <Outlet />
+      <SafeMargin/>
     </MainCenterWrapper>
-  )
-}
-
-
+  );
+};
 
 export default MainLeftWrapper;

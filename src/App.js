@@ -13,12 +13,13 @@ import AuthProvider from "./Components/Auth/AuthProvider";
 import Search from "./Pages/Search";
 import Header from "./Components/Header";
 import { MobileWrapper } from "./Components/Wrapper";
+import RoomDetail from "./Pages/room/RoomDetail";
 function App() {
   return (
     <BrowserRouter>
       {/* Navbar는 리랜더링 되지않고, URL에 따라 하위 컴포넌트만 리랜더링 되게하기 위한 구조입니다 */}
       <DevTools />
-      <Header />
+
       <Navbar />
       {/* 양옆 Padding을 제공하는 Wrapper 입니다 */}
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/favorites" element={<Favorite />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/room/:id" element={<RoomDetail />} />
         </Route>
         {/* 잘못된 경로일때 보내는 곳*/}
         <Route path="*" element={<Missing />} />

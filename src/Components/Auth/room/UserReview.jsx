@@ -1,9 +1,9 @@
 import React from "react";
 import userIcon from "../../../images/userIcon.webp";
 import { useState, useEffect } from "react";
-import { FaStar } from "react-icons/fa";
 import styled from "@emotion/styled";
 import axios from "axios";
+import { ReviewStar } from "../../../Hooks/ReviewStar";
 
 const Wrap = styled.div`
   display: flex;
@@ -13,7 +13,6 @@ const Wrap = styled.div`
 
 const RatingText = styled.div`
   color: #787878;
-  font-size: 12px;
   font-weight: 400;
 `;
 
@@ -52,54 +51,11 @@ const Gray = styled.span`
   color: var(--font-gray);
 `;
 
-const UserReview = () => {
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  // axios로 리뷰받기
-  const getReview = async () => {
-    try {
-      axios
-        .get("/room/detail/1/review", {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-        .then((res) => {
-          console.log(res.data);
-          setData(res.data);
-        });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  useEffect(() => {
-    getReview();
-  }, []);
 
-  // 대기 중일 때 +  아직 posts 값이 설정되지 않았다면
-  if (isLoading && !data) {
-    return null;
-  }
-  let filledStar = "";
-  let noStar = "";
-  const ReviewStar = (starNum) => {
-    console.log(starNum);
 
-    for (let i = 0; i < starNum; i++) {
-      filledStar += "★";
-    }
-    console.log(filledStar);
-    for (let j = 0; j < 5 - starNum; j++) {
-      noStar += "☆";
-    }
-    return (
-      <>
-        <Yellow>{filledStar}</Yellow>
-        <Gray>{noStar}</Gray>
-      </>
-    );
-  };
 
+
+const UserReview = ({data}) => {
   // 비구조화 할당
   const { reviewStar, text, date } = data;
   // reviewStar 숫자대로 별표 표시하기
@@ -113,7 +69,7 @@ const UserReview = () => {
   const diffDay = Math.floor(diff / 1000 / 60 / 60 / 24); // 일
   const diffMonth = Math.floor(diff / 1000 / 60 / 60 / 24 / 30); // 월
 
-  return (
+  return data!==null ?(
     <div className="reviewContainer">
       <div className="userImg">
         <UserImg>
@@ -122,7 +78,9 @@ const UserReview = () => {
       </div>
       <div className="userContent">
         <Stars>
-          <div className="rating">{ReviewStar(reviewStar)}</div>
+          <div className="rating">
+            <ReviewStar starNum={reviewStar} />
+            </div>
         </Stars>
         <RatingText>{text}</RatingText>
       </div>
@@ -136,7 +94,7 @@ const UserReview = () => {
           : ` 몇년 전`}
       </div>
     </div>
-  );
+  ):null;
 };
 
 export default UserReview;

@@ -86,7 +86,7 @@ const Navbar = () => {
             </NavElem>
           </NavLink>
           <NavLink to="/board" className={({isActive}) =>isActive?"activeIcon":"disableIcon"}>
-            <NavElem title="커뮤니티">
+            <NavElem title="모아보기">
               <Community />
             </NavElem>
           </NavLink>

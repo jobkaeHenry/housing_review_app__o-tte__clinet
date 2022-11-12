@@ -158,6 +158,6 @@ export const handlers = [
     );
   }),
   rest.post("/room", async (req, res, ctx) => {
-    return res(ctx.status(200));
+    return res(ctx.json(req));
   }),
 ];

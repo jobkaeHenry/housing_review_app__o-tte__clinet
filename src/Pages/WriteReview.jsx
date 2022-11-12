@@ -111,12 +111,13 @@ const WriteReview = () => {
   data.option = score4;
   data.crime = score5;
   data.sunlight = score6;
+
   console.log(data);
 
   const sendReview = () => {
     axios({
       method: "post",
-      url: "/room/detail/1/review",
+      url: "/room",
       data: data,
     });
   };

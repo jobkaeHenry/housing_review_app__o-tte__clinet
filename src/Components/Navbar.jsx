@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 // 이미지의 경우, 상단에 변수로 Import해서 사용할 시 자동으로 경로를 관리해줍니다
 // 아래와같이 변수로 import시 이미지의 경로를 string 형태로 리턴해줍니다
-import { Link, Outlet, useParams, NavLink } from "react-router-dom";
+import { Outlet,  NavLink } from "react-router-dom";
 import { SubText } from "./GlobalComponents";
 import { ReactComponent as Home } from "../images/homeIcon.svg";
 import { ReactComponent as Community } from "../images/communityIcon.svg";
 import { ReactComponent as Chat } from "../images/chatIcon.svg";
-import { ReactComponent as Market } from "../images/marketIcon.svg";
+import { ReactComponent as Search } from "../images/searchIcon.svg";
 import { ReactComponent as Login } from "../images/loginIcon.svg";
 import ProfileIcon from "../images/emptyProfileIcon.svg";
 import { useRecoilValue } from "recoil";
@@ -90,7 +90,7 @@ const Navbar = () => {
             }
           >
             <NavElem title="검색">
-              <Market />
+              <Search />
             </NavElem>
           </NavLink>
           <NavLink

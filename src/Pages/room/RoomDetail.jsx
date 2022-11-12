@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import Header from "../../Components/Header";
 import UserReview from "../../Components/Auth/room/UserReview";
 import axios from "axios";
-import { ImageElem, ImageWrapper, RowWrapper } from "../../Components/Main/HouseCard";
+import {
+  ImageElem,
+  ImageWrapper,
+  RowWrapper,
+} from "../../Components/Main/HouseCard";
 import { ReviewStar } from "../../Hooks/ReviewStar";
 import styled from "@emotion/styled";
 
@@ -14,9 +18,8 @@ const Centering = styled.div`
   margin: 0 auto;
 `;
 const DistanceVisual = styled.div`
-    width: 684px;
-
-`
+  width: 684px;
+`;
 
 const RoomDetail = () => {
   const [starData, setStarData] = useState(null);
@@ -75,8 +78,10 @@ const RoomDetail = () => {
       <Centering>
         <ReviewStar starNum={Math.floor(data.average)} />
         <RowWrapper>
-        <sapn className="h4 bold">{data.average}</sapn><span className="h4 gray"> / 5</span>
+          <sapn className="h4 bold">{data.average}</sapn>
+          <span className="h4 gray"> / 5</span>
         </RowWrapper>
+        
       </Centering>
       {starData.map((e) => {
         return <UserReview key={e.reviewID} data={e} />;

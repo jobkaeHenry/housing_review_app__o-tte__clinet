@@ -14,6 +14,7 @@ width: 100%;
 `
 
 const HouseCard = (props) => {
+    console.log(props)
   return (
     <CardWrapper>
         <ImageWrapper src={props.image} alt={`${props.title} 의 대표사진`}/>

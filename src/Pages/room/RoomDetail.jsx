@@ -5,7 +5,7 @@ import axios from "axios";
 
 const RoomDetail = () => {
 
-    const [data, setData] = useState(null);
+    const [starData, setStarData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     // axios로 리뷰받기
     const getReview = async () => {
@@ -18,7 +18,7 @@ const RoomDetail = () => {
           })
           .then((res) => {
             console.log(res.data);
-            setData(res.data);
+            setStarData(res.data);
             setIsLoading(false);
           });
       } catch (err) {
@@ -32,7 +32,7 @@ const RoomDetail = () => {
     <>
     <Header ></Header>
       <div>RoomDetail</div>
-      <UserReview data={data}/>
+      <UserReview data={starData}/>
     </>
   ):null;
 };

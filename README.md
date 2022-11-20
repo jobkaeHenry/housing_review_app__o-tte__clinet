@@ -68,5 +68,5 @@
 
 ### Design
 **디자인 툴**<br>
-<img src="https://img.shields.io/badge/figma-000000?style=flat-square&logoColor=white"/><br>
+<img src="https://img.shields.io/badge/figma-000000?style=flat-square&logo=Figma&logoColor=white"/><br>
 

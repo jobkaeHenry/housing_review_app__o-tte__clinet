@@ -57,11 +57,11 @@
 ### Back-end
 
 **언어**<br>
-<img src="https://img.shields.io/badge/Python-007396?style=flat-square&logoColor=white"/><br>
+<img src="https://img.shields.io/badge/Python-007396?style=flat-square&logo=Python&logoColor=white"/><br>
 **프레임워크/라이브러리**<br>
-<img src="https://img.shields.io/badge/Django-6DB33F?style=flat-square&logo=Spring&logoColor=white"/><br>
+<img src="https://img.shields.io/badge/Django-6DB33F?style=flat-square&logo=Django&logoColor=white"/><br>
 **데이터베이스**<br>
-<img src="https://img.shields.io/badge/SQLite-4479A1?style=flat-square&logo=MySQL&logoColor=white"/><br>
+<img src="https://img.shields.io/badge/SQLite-4479A1?style=flat-square&logo=SQLite&logoColor=white"/><br>
 **배포 및 관리**<br>
 <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white"/>
 <br>

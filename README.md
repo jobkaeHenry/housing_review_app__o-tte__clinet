@@ -2,7 +2,7 @@
 
 ## :bookmark_tabs: 프로젝트 설명
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fci6rfF%2FbtrRKJ59FQz%2FMchLmK0zYyuWGYrTIwkaZ0%2Fimg.jpg"><br>
-<img src="https://https://img1.daumcdn.net/thumb/R1280x0/scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcKdxZc%2FbtrRGw0Jek0%2Fn7GL8zgqKEFXmIllTo0VNk%2Fimg.png"><br>
+<img src="https://https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcKdxZc%2FbtrRGw0Jek0%2Fn7GL8zgqKEFXmIllTo0VNk%2Fimg.png"><br>
 
 
 
